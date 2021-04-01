@@ -1,6 +1,6 @@
 # Newtab for poweruser
 
-<img src="images/icon.png" >
+<img src="images/icon.png" width="48px" height="48px">
 
 *Experience minimalist newtab*
 *no need mouse anymore, aliases as bookmark*
