@@ -5,7 +5,7 @@
 *Experience minimalist newtab*
 *no need mouse anymore, aliases as bookmark*
 
-![](https://img.shields.io/amo/users/{8f713cff-eea7-4459-986f-b8366bca7f7a}?color=FF6611&label=Firefox%20users&style=flat-square) 
+![](https://img.shields.io/amo/users/{37d7927b-a05b-44d8-a61a-737db6f56924}?color=FF6611&label=Firefox%20users&style=flat-square) 
 
 ## Install Extension
 
@@ -43,6 +43,17 @@ pic https://unsplash.com/s/photos/%s
 Use browser without mouse is now possible. And that's great !
 
 Feel free to open issues or pull requests!
+
+## Roadmap
+
+* push to store
+* screenshots
+* feat vim nav in input
+* fat caret
+* one alias open multiple tabs
+* ctrl + t -> newtab
+* config custom color
+* config custom search engine
 
 ## Privacy
 
