@@ -1,0 +1,63 @@
+body
+{
+  background-color:#212436;
+  color:white;
+  font-family:monospace;
+}
+
+#input
+{
+  width:60vw;
+  float:left;
+  margin-top:40vh;
+  margin-left:20vw; 
+  font-size:32px;
+  padding:8px;
+  display:block;
+  background-color:#151728;
+  color:white;
+  border:0;
+  outline:0;
+  background-color:black;
+  border-radius:4px;
+}
+
+#input::selection
+{
+  background-color:#212436;
+  color:#03a1ec;
+}
+
+.settings
+{
+  position:fixed;
+  top:100%;
+
+  width:100vw;
+  height:100vh;
+}
+
+.active
+{
+  top:0px;
+}
+
+textarea
+{
+  width:100vw;
+  height: 90vh;
+  margin:0;
+  border:0;
+  background-color:#212436;
+  display:block;
+  color:white;
+
+  outline:none;
+}
+
+input[type="sumbit"]
+{
+  margin:8px;
+  float:left;
+  display:block; 
+}
