@@ -17,7 +17,7 @@
 
 1. Press key 't' when no field are focused to open your newtab
 
-<img src="images/t.gif" height="20px">
+<img src="images/t.gif">
 
 
 2. Type ':settings' & Enter
@@ -29,13 +29,13 @@ dev https://dev.to
 pic https://unsplash.com/s/photos/%s
 ```
 
-<img src="images/settings.gif" height="20px">
+<img src="images/settings.gif">
 
 4. Enjoy
 
-<img src="images/alias.gif" height="20px">
+<img src="images/alias.gif">
 
-<img src="images/alias_arg.gif" height="20px">
+<img src="images/alias_arg.gif">
 
 
 ## About Newtab for poweruser
