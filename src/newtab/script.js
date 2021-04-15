@@ -99,8 +99,6 @@ browser.storage.local.get(['aliases']).then(function (res) {
           pos = getCaretPos();
           if ( pos > 0 )
            setCaretPos(pos - 1);
-          
-          e.preventDefault();
         }  
         else if (e.key == 'l') //right
         {
@@ -108,13 +106,13 @@ browser.storage.local.get(['aliases']).then(function (res) {
           if (pos < input.value.length)
             setCaretPos(pos + 1);
 
-          e.preventDefault();
         }
         else if (e.key == 'i')
         {
           mode = 'insert';
-          e.preventDefault();
         }
+        
+        e.preventDefault();
 
       }
 
