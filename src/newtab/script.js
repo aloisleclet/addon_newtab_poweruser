@@ -1,9 +1,25 @@
+let mode = 'insert'; //or normal
+let pos = 0; //caret postion
+
+let input = document.getElementById('input');
+
+function setCaretPos(caretPos) {
+  input.setSelectionRange(caretPos, caretPos);
+}
+
+function getCaretPos() {
+  return input.selectionEnd;
+}
+
 document.querySelector('#input').focus();
 
-//retrieve aliases
+//focus input on click anywhere (for new tab which don't allowed automatic focus)
+document.addEventListener('click', function() {
+  document.querySelector('#input').focus();
+});
 
+//retrieve aliases
 browser.storage.local.get(['aliases']).then(function (res) {
-  console.log(res);  
   let settings = res;
 
   let aliases = [];
@@ -22,7 +38,7 @@ browser.storage.local.get(['aliases']).then(function (res) {
   
   document.addEventListener('keydown', function(e) {
     
-      if (document.activeElement.tagName == 'INPUT' && e.key === 'Enter')
+      if (document.activeElement.tagName == 'INPUT' && e.key == 'Enter')
       {
         let query = document.querySelector('#input').value;
  
@@ -39,15 +55,6 @@ browser.storage.local.get(['aliases']).then(function (res) {
 
           window.location.href = url;
         }
-        else if (query == ":resetall")
-        {
-          //reset storage
-          browser.storage.local.set({'aliases': []}).then(
-            function () {
-              document.querySelector('#input').value = 'press f5';
-            }
-          );
-        }
         else if (query == ":settings")
         {
           //go to settings
@@ -63,13 +70,55 @@ browser.storage.local.get(['aliases']).then(function (res) {
 
           
         }
+        else if (query == ":resetall")
+        {
+          //reset storage
+          browser.storage.local.set({'aliases': []}).then(
+            function () {
+              document.querySelector('#input').value = 'press f5';
+            }
+          );
+        }
         else
         {
           //duckduckgo search
           window.location.href = 'https://duckduckgo.com/?q='+query;
         }
       }
-  
+
+      if (mode == 'insert' && e.key == 'Escape') //switch mode
+      {
+        mode = mode == 'normal' ? 'insert' : 'normal';
+        e.preventDefault();
+      }
+      else if (mode == 'normal') //normal navigation mode
+      {
+
+        if (e.key == 'h') //left
+        {
+          pos = getCaretPos();
+          if ( pos > 0 )
+           setCaretPos(pos - 1);
+          
+          e.preventDefault();
+        }  
+        else if (e.key == 'l') //right
+        {
+          pos = getCaretPos();
+          if (pos < input.value.length)
+            setCaretPos(pos + 1);
+
+          e.preventDefault();
+        }
+        else if (e.key == 'i')
+        {
+          mode = 'insert';
+          e.preventDefault();
+        }
+
+      }
+
+
   });
 });
 
@@ -99,8 +148,8 @@ document.querySelector('#submit').addEventListener('click', function () {
 
         document.querySelector('div').classList.remove('active');
         location.reload();
-        document.querySelector('#input').value = "";
-        document.querySelector('#input').focus();
+        input.value = "";
+        input.focus();
         
       }
     );

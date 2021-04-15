@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "addon_newtab_poweruser",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "the new tab for powerusers.",
     "homepage_url": "https://github.com/aloisleclet/addon_newtab_poweruser",
     "icons": {
@@ -14,6 +14,9 @@
     "browser_action": {
       "default_icon": "./icons/icon96.png",
       "default_title": "newtab poweruser"
+    },
+    "chrome_url_overrides" : {
+      "newtab": "./newtab/newtab.html"
     },
     "content_scripts": [
         {

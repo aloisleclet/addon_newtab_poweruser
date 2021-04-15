@@ -3,7 +3,9 @@
 <img src="images/icon.png" width="48px" height="48px">
 
 *Experience minimalist newtab*
-*no need mouse anymore, aliases as bookmark*
+*Keyboard first*
+*Aliases as bookmark*
+*Vim-like normal/insert mode*
 
 ![](https://img.shields.io/amo/users/{37d7927b-a05b-44d8-a61a-737db6f56924}?color=FF6611&label=Firefox%20users&style=flat-square) 
 
@@ -15,7 +17,7 @@
 
 ## How to use
 
-1. Press key 't' when no field are focused to open your newtab
+1. Press key <Alt> + <t> when no field are focused to open your newtab
 
 <img src="images/t.gif">
 
@@ -46,12 +48,9 @@ Feel free to open issues or pull requests!
 
 ## Roadmap
 
-* push to store
 * screenshots
-* feat vim nav in input
 * fat caret
 * one alias open multiple tabs
-* ctrl + t -> newtab
 * config custom color
 * config custom search engine
 
