@@ -103,7 +103,9 @@ browser.storage.local.get(['aliases', 'colors']).then(function (res) {
             {
               //open new tab;
               if (i == 0)
-                window.location.href = matchs[i].url;
+                setTimeout(function () {
+                  window.location.href = matchs[i].url;
+                }, 300);
               else
                 window.open(matchs[i].url, '_blank');
             }

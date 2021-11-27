@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "addon_newtab_poweruser",
-    "version": "1.0.1",
+    "version": "1.2.1",
     "description": "the new tab for powerusers.",
     "homepage_url": "https://github.com/aloisleclet/addon_newtab_poweruser",
     "icons": {

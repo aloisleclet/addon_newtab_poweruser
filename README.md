@@ -17,28 +17,48 @@
 
 ## How to use
 
-1. Press key <Alt> + <t> when no field are focused to open your newtab
+1. Press <Alt> + <t> when no field are focused to open your newtab
 
 <img src="images/t.gif">
 
 
 2. Type ':settings' & Enter
 
-3. Set up your alias in the configuration area
+3. Set up your alias & colors in the configuration area
 
 ```
 dev https://dev.to
 pic https://unsplash.com/s/photos/%s
 ```
 
+4. Set up one alias open a group of tab
+
+```
+dev https://dev.to
+dev https://news.ycombinator.com/
+```
+
+5. Set up custom colors
+
+```
+primaryColor #34495e
+secondaryColor #2c3e50
+fontColor #ecf0f1  
+```
+
 <img src="images/settings.gif">
 
-4. Enjoy
+6. Use vim navigation in the main input field
+
+Press <Escape> to switch to navigation mode
+Press <h> & <l> to navigate inside the input field
+Press <i> to switch to insert mode
+
+7. Enjoy
 
 <img src="images/alias.gif">
 
 <img src="images/alias_arg.gif">
-
 
 ## About Newtab for poweruser
 
@@ -48,9 +68,6 @@ Feel free to open issues or pull requests!
 
 ## Roadmap
 
-* push new version
-* fat caret
-* config custom color
 * config custom search engine
 
 ## Privacy
