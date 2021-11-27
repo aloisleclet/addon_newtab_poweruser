@@ -48,9 +48,8 @@ Feel free to open issues or pull requests!
 
 ## Roadmap
 
-* screenshots
+* push new version
 * fat caret
-* one alias open multiple tabs
 * config custom color
 * config custom search engine
 
